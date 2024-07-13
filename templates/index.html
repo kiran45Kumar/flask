@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title style="font-family: 'Oswald ' sans-serif;"> {% block title2 %}Jussure Technologies{% endblock  %}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+    <link rel="icon" href="{{url_for('static',filename = 'logo.png')}}" type="image/x-icon" class="link" style="height: 100%; width: 100%;" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- navbar section -->
+    <nav  class="navbar navbar-expand-lg navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 0 20px  silver; margin-top: 1%;" id="nav-primary">
+        <div class="container-fluid">
+          <div class="logo-title">
+            <div class="logo-left">
+              <img src="{{url_for('static',filename = 'logo.png')}}" alt="">
+            </div>
+            <div class="logo-right">
+              <h1>Jussure Technologies</h1>
+            </div>
+            </div>
+          <button class="navbar-toggler" type="button" style="border: 2px solid royalblue;outline: none;" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link anchor-tag" style="color: black; font-weight: bold; font-size: 15px; font-family: 'Oswald' sans-serif;" aria-current="page" href="{{url_for('main')}}">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-tag" style="color: black; font-weight: bold; font-size: 15px; font-family: 'Oswald' sans-serif;" aria-current="page" href="{{url_for('about')}}">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-tag" style="color: black; font-weight: bold; font-size: 15px; font-family: 'Oswald' sans-serif;" href="{{url_for('services')}}">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-tag" style="color: black; font-weight: bold; font-size: 15px; font-family: 'Oswald' sans-serif;" href="{{url_for('pricing')}}">PRICING</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-tag" style="color: black; font-weight: bold; font-size: 15px; font-family: 'Oswald' sans-serif;" href="{{url_for('register')}}">CONTACT</a>
+              </li>
+            </ul>
+            </form>
+          </div>
+        </div>
+      </nav>
+{% block body %}
+      <!-- top-carousel-section -->
+      <section>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{url_for('static',filename = 'slider.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Tech Trends Unveiled</h3>
+              <p>A Dynamic Exploration</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename = 'img2.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Innovation in Action</h3>
+              <p>The Latest Tech Marvels</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename = 'imgback4.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Digital Frontiers</h3>
+              <p>Navigating Tomorrow's Technology Today</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+      </section>
+      <hr>
+
+      <!-- sectionleftandright section  -->
+      <section>
+        <div class="section-container">
+          <div class="section-left">
+            <h1>Stunning web designs, seamless development.</h1>
+            <p>We create stunning web designs and provide seamless website development. Elevate your online presence with our expert solutions.</p>
+           <div class="button-flex">
+             <button onclick="contactPage()">Contact Us</button>
+            <button onclick="aboutusPage()">About Us</button>
+           </div>
+          </div>
+          <div class="section-right">
+            <img src="{{url_for('static',filename = 'webdesign.png')}}" alt="">
+          </div>
+        </div>
+
+      </section>
+      <!-- about-us-section -->
+      <section>
+        <div class="aboutus">
+          <h3 class="h4" style="text-align: center;color: rgba(0, 21, 255, 0.621);; margin-top: 5%;">About</h3>
+          <p  style="text-align: center;color:#555;font-family: 'Times New Roman', Times, serif;font-size: 18px;">We are committed to excellence in web development, providing personalized solutions that help you stand out in the digital landscape.</p>
+        </div>
+      </section> 
+     
+
+      <!-- Services-Section -->
+      <section>
+        <div class="container-sm containing" >
+          <p id="max" class="h4" style="text-align: center;color: rgba(0, 21, 255, 0.621);;">Our Services</p>
+        </div>
+        <a  style="text-decoration: none;">
+        <div class="services">
+          <div class="service" >
+            <img src="{{url_for('static',filename = 'web4.png')}}" alt="" >
+            <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 1.3rem; font-weight: 600;color: #555;">Website Development</h5>
+            <p style="border-bottom: 4px solid rgba(0, 21, 255, 0.621);width: 50%; text-align: center;margin-left: 25%; border-radius: 5px;"></p>
+            <h6 style="font-weight:400;color: #555;font-family: 'Times New Roman', Times, serif;font-size: 18px;"> We specialize in creating dynamic, user-friendly sites that drive engagement and elevate your online presence</h6>
+            <button class="btn btn-outline-success" onclick="servicesPage()">See More</button>
+          </div>
+        </a>
+        <a  style="text-decoration: none;">
+          <div class="service" >
+            <img src="{{url_for('static',filename = 'webdesign.png')}}" alt="" >
+            <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 1.3rem; font-weight: 600;color: #555;">Web design</h5>
+            <p style="border-bottom: 4px solid rgba(0, 21, 255, 0.621);width: 50%; text-align: center;margin-left: 25%; border-radius: 5px;"></p>
+            <h6 style="font-weight:400;color: #555;font-family: 'Times New Roman', Times, serif;font-size: 18px;">Web design is the process of creating the visual layout, user interface, and user experience of websites.</h6>
+            <button class="btn btn-outline-success" onclick="servicesPage()">See More</button>
+          </div>
+        </a>
+        <a  style="text-decoration: none;">
+          <div class="service" >
+            <img src="{{url_for('static',filename = 'web5.jpg')}}" alt="" >
+            <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 1.3rem; font-weight: 600;color: #555;">E-Commerce Solutions</h5>
+            <p style="border-bottom: 4px solid rgba(0, 21, 255, 0.621);width: 50%; text-align: center;margin-left: 25%; border-radius: 5px;"></p>
+            <h6 style="font-weight:400;color: #555;font-family: 'Times New Roman', Times, serif;font-size: 18px;">E-commerce eliminates geographical barriers, enabling businesses to reach a global audience.</h6>
+            <button class="btn btn-outline-success" onclick="servicesPage()">See More</button>
+          </div>
+        </a>
+        <a  style="text-decoration: none;" >
+          <div class="service" >
+            <img src="{{url_for('static',filename = 'web6.png')}}" alt="" >
+            <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 1.3rem; font-weight: 600;color: #555;">Web App Development</h5>
+            <p style="border-bottom: 4px solid rgba(0, 21, 255, 0.621);width: 50%; text-align: center;margin-left: 25%; border-radius: 5px;"></p>
+            <h6 style="font-weight:400;color: #555;font-family: 'Times New Roman', Times, serif;font-size: 18px;">Tailored for efficiency and seamless user experience, our solutions elevate your digital presence</h6>
+            <button class="btn btn-outline-success" onclick="servicesPage()">See More</button>
+          </div>
+        </a>
+        </div>
+      </section>
+        <!-- middle -carousel-section -->
+         <section>
+          <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="image-cont">
+                  <img src="{{url_for('static',filename = 'img1.jpg')}}" class="d-block w-100" alt="..." height="" >
+                  <h1 class="display-6" >Welcome to our digital hub, where innovation meets elegance.</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="image-cont">
+                  <img src="{{url_for('static',filename = 'passion.jpg')}}" class="d-block w-100" alt="..." height="" >
+                  <h1 class="display-6" >Your gateway to an enriched online experience.</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="image-cont">
+                  <img src="{{url_for('static',filename = 'back1 (1).jpg')}}" class="d-block w-100" alt="..." height="">
+                  <h1 class="display-6" >Empower your tasks, simplify success that's our goal.</h1>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+
+        <!-- technology and frameworks section -->
+        <section>
+          <h3 style="text-align: center;color: rgba(0, 21, 255, 0.621);; margin-top: 5%;">Technology and frameworks</h3>
+          <p class="text-center" style="margin-top: 1%; color: #555;font-family: 'Times New Roman', Times, serif;">At the heart of our work is a carefully chosen Technology and frameworks ensuring top-notch performance and user satisfaction.</p>
+           <div class="tech-stacks">
+            <div class="tech-items">
+                  <img src="{{url_for('static',filename = 'html-5.png')}}" alt="" height="150px">
+                  <img src="{{url_for('static',filename = 'css.jpeg')}}" alt="" height="150px">
+                  <img src="{{url_for('static',filename = 'javascript-39400.png')}}" alt="" height="150px">
+                  <img src="{{url_for('static',filename = 'pythonn.png')}}" alt="" height="150px">
+                  <img src="{{url_for('static',filename = 'react3.png')}}" alt="" height="150px">
+                  <img src="{{url_for('static',filename = 'flasklogo.png')}}" alt="" height="150px">
+                  <img src="{{url_for('static',filename = 'django.png')}}" alt="" height="50px">
+                </div>
+            <div class="tech-items">
+              <img src="{{url_for('static',filename = 'html-5.png')}}" alt="" height="150px">
+              <img src="{{url_for('static',filename = 'css.jpeg')}}" alt="" height="150px">
+              <img src="{{url_for('static',filename = 'javascript-39400.png')}}" alt="" height="150px">
+              <img src="{{url_for('static',filename = 'pythonn.png')}}" alt="" height="150px">
+              <img src="{{url_for('static',filename = 'react3.png')}}" alt="" height="150px">
+              <img src="{{url_for('static',filename = 'flasklogo.png')}}" alt="" height="150px">
+              <img src="{{url_for('static',filename = 'django.png')}}" alt="" height="50px">
+                </div>
+            </div>
+          </section>
+
+          <!-- connect-us-section -->
+          <section class="talk">
+            <div align = 'center'>
+            <a href="{{url_for('register')}}" class="text-center"><button class="btn btn-warning" type="submit" style="border-radius: 20px;">Connect Us</button></a> 
+          </div>
+          </section>
+
+          <!-- Director-section -->
+          <section>
+            <h3 style="text-align: center;color: rgba(0, 21, 255, 0.621);; margin-top: 2%;">Directors </h3>
+              <div class="team-section">
+                <div class="team-top">
+                  <div class="team-left teams">
+                    <img src="{{url_for('static', filename = 'director4.jpg')}}" alt="" style="height: 250px;width: 100%;border-radius: 6px;">
+                    <div class="team-paragraphs">
+                      <h4 class="text-dark text-center" style="margin: 10px;">Kiran Kumar B K</h4>
+                      <p class="lead text-center" style="margin: 10px;">Director</p>
+                    </div>
+                    <div class="social-icons" align="center">
+                      <a
+                      href="https://www.instagram.com/__kiran__jt/"
+                      class="me-4 text-reset text-center"
+                    >
+                      <i class="fab fa-instagram" style="color:orangered"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/kiran-kumar-2075bb300/"
+                      class="me-4 text-reset text-center"
+                    >
+                      <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+                    </a>
+                    </div>
+                </div>
+
+              </div>
+                <div class="team-top">
+                  <div class="team-left teams">
+                    <img src="{{url_for('static', filename = 'dhanush.jpg')}}" alt="" style="height: 250px;width: 100%;border-radius: 6px;">
+                    <div class="team-paragraphs">
+                      <h4 class="text-dark text-center" style="margin: 10px;">Dhanush M</h4>
+                      <p class="lead text-center" style="margin: 10px;">Co-Director</p>
+                    </div>
+                    <div class="social-icons" align="center">
+                      <a
+                      href="https://www.instagram.com/dhanushm07/?utm_source=ig_web_button_share_sheet"
+                      class="me-4 text-reset"
+                    >
+                      <i class="fab fa-instagram" style="color:orangered"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/dhanush-m-b577b1291/"
+                      class="me-4 text-reset"
+                    >
+                      <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+                    </a>
+                    </div>
+                </div>
+
+              </div>
+              </div>
+          </section>
+          <hr>
+{% endblock body %}
+
+<!-- footer section -->
+<section class="footer">
+            <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="font-family:'sans-serif';">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="https://www.facebook.com/profile.php?id=61557362804622&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" class="me-4 text-reset">
+        <i class="fab fa-facebook-f" style="color: rgba(0, 21, 255, 0.621);"></i>
+      </a>
+      <!-- <a href="" class="me-4 text-reset"> -->
+        <!-- <i class="fab fa-google"></i> -->
+      <!-- </a> -->
+      <a href="https://www.instagram.com/jussure_technologies?igsh=MW12NGI0MHRtNHU4cg==" class="me-4 text-reset">
+        <i class="fab fa-instagram" style="color: #405DE6;"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/jussure-technologies/?viewAsMember=true" class="me-4 text-reset">
+        <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.621);"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold  mb-4">
+            
+          </h6>
+          <p style="font-size: 21px; color:#555;font-family: 'Anta', sans-serif;" class="fw-bold">
+            Jussure Technologies
+          </p>
+          <i>Just future</i>
+
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color: #555;">
+            Services
+          </h6>
+          <p>
+            <p href class="text-reset">Website Development</p>
+          </p>
+          <p>
+            <p href class="text-reset">E-Commerce Development</p>
+          </p>
+          <p>
+            <p href class="text-reset">Web App Development</p>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+      
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color: #555;">Contact</h6>
+
+          <a style="text-decoration: none; color: #000;">
+            
+              <p  style="color: #555;"><i class="fa-solid fa-location-dot" style="font-size: 20px;"></i> &nbsp;JP Nagar 6th Phase, Bangalore 560078</p>
+          </a>
+           
+           <a href="mailto:jussuretechnologies@gmail.com" style="text-decoration: none;color: #555;"> <p><i class="fas fa-envelope me-3"></i>jussuretechnologies@gmail.com</p></a>
+       
+            <a href="tel:+919916215275" style="text-decoration: none; color: #000;">
+              <div>
+                <p style="color: #555;"><i class="fas fa-phone me-3"></i>9916215275</p>
+              </div>
+            </a>
+        </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->        
+
+  <!-- Final -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <a class="text-reset fw-bold" href="{{url_for('main')}}" style="font-family: 'Anta', sans-serif;">Jussure Technologies</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+          </section>
+</body>
+
+<!-- script-section -->
+<section>
+<script src="{{url_for('static',filename = 'script.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</section>
+</html>

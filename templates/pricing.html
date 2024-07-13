@@ -1,0 +1,75 @@
+{% extends 'index.html' %}
+{% block title2 %}Pricing{% endblock title2 %}
+{% block body %}
+<head>
+    <script src="https://kit.fontawesome.com/37d80daf09.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-section">
+            <img src="{{url_for('static',filename = 'vision-right-img (2).jpg')}}" alt="" width="100%" >
+        </div>
+    </header>
+    <main>
+           <section style="margin-top: 5%;">
+            <h3 class="h4" style="text-align: center;color: rgba(0, 21, 255, 0.621);; font-family: 'Times New Roman', Times, serif;margin: 10px;">Pricing</h3>
+            <div class="pricing-information">
+                <div class="pricing-info">
+                    <div class="icon-standard pricing-left"><i class="fa-solid fa-bold"></i></div>
+                    <h1 style="color: rgb(228, 200, 46);">Basic Plan</h1>
+                    <p>Provides essential features and services at the most affordable rate.</p>
+                   <div class="d-main">
+                    <p class="lead price-range">&#8377;20,000 - 30,000</p>
+                    <ul class="text-start list-none`">
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Up to 5 pages</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Responsive Design</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Basic Template Customization</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Contact form integration</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;6 months basis hosting</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;1-year domain registration</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;1 month of email support</li>
+                    </ul>
+                   </div>
+                </div>
+                <div class="pricing-info active-2">
+                    <div class="icon-standard pricing-middle"><i class="fa-solid fa-s"></i></div>
+                    <h1 style="color: sandybrown;;">Standard</h1>
+                    <p>Offers a balance of features and cost, including some enhanced options.</p>
+                    <p class="lead price-range">&#8377;40,000 - 60,000</p>
+                  <div class="d-main">
+                    <ul class="text-start list-none`">
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Up to 10 pages</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Responsive Design</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Custom Design</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Advanced Contact form integration</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Website Maintenance</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;1-year basis hosting</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;1-year domain registration</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;2 months of email support</li>
+                    </ul>
+                </div>
+                  </div>
+                <div class="pricing-info">
+                    <div class="icon-standard pricing-right"><i class="fa-solid fa-p"></i></div>
+                    <h1 style="color: violet;">Premium Plan</h1>
+                    <p>Delivers the highest level of features, services, and support at a premium price.</p>
+                    <p class="lead price-range">&#8377;80,000 - 1,20,000</p>
+                   <div  class="d-main">
+                    <ul class="text-start list-none`">
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Up to 15 pages</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Responsive Design</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Fully custom designs with multiple revisions</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Advanced forms with condtional logic</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Website Maintenance and support</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;Web apk's</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;1-year premium hosting with high performance and security</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;1-year domain registration with premium extension</li>
+                        <li><i class="fa-solid fa-check"></i>&nbsp;3 months of email,phone and live chat support</li>
+                    </ul>
+                   </div>
+                </div>
+            </div>
+           </section>
+    </main>
+</body>
+{% endblock body %}

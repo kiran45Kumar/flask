@@ -1,0 +1,638 @@
+{% extends 'index.html' %} {% block title2 %}About Us{% endblock title2 %} {%
+block body %}
+<style>
+  .about-img {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  .centered .arrow {
+    animation: blink 0.8s infinite;
+  }
+
+  .team-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .team {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: center;
+    height: 400px;
+    width: 370px;
+    border-radius: 9px;
+    margin: 12px;
+    border: 1px solid silver;
+    cursor: pointer;
+  }
+  .team:hover{
+    box-shadow: 0px 5px 8px 5px silver;
+    transition: all 0.2s ease;
+  }
+  .founders {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 2%;
+  }
+  .founder {
+    font-family: "Times New Roman", Times, serif;
+  }
+  .founder2 .h3 {
+    color: rgb(74, 67, 67)
+  }
+  .founder2{
+    width: 500px;
+  }
+  .text-center a {
+    margin-top: 5%;
+  }
+  .team img{
+    border: 0;
+  }
+ /* media queries */
+ @media screen and (max-width:992px) {
+  .primary-paragraph{
+    font-size: 21px;
+  }
+  .secondary-paragraph{
+    font-size: 21px;
+  }
+ }
+ @media screen and (max-width:576px) {
+  .primary-paragraph{
+    font-size: 15px;
+  }
+  .secondary-paragraph{
+    font-size: 15px;
+  }
+
+  
+ }
+</style>
+
+<body>
+
+  <!-- hero section -->
+ <section>
+  <div class="about-img" style="margin-top: 3%">
+    <img
+      style="opacity: 0.3"
+      src="{{url_for('static',filename = 'background.jpg')}}"
+      class="img-fluid"
+      alt=""
+    />
+    <div class="centered">
+      <p class="h1" style="opacity: 2; color: rgba(0, 21, 255, 0.621)">
+        About Us
+      </p>
+      <p class="lead" style="color: black">Create, Innovate, Build</p>
+      <a href="/services">
+        <p class="arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square" style="color: rgba(0, 21, 255, 0.621);"></i>
+        </p>
+        <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
+      </a>
+    </div>
+  </div>
+ </section>
+ <!-- hero section -->
+
+
+
+<!-- Company Section -->
+  <section>
+    <h3
+      style="text-align: center; color: rgba(0, 21, 255, 0.621); margin-top: 5%;font-family: 'Times New Roman', Times, serif;"
+    >
+      About Company
+    </h3>
+    <div class="founders">
+      <div class="founder">
+        <img
+          src="{{url_for('static',filename = 'img5.jpeg')}}"
+          class="mx-auto d-block rounded"
+          width="100%"
+        />
+      </div>
+      <div class="founder2">
+        <p
+          class="h3 text-center"
+          style="font-family: 'Anta', sans-serif; font-weight: 600;color: slategrey;"
+        >
+          Jussure Technologies
+        </p>
+        <p
+          class="text-center primary-paragraph"
+          style="
+            color: #555;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            line-height: 2;
+          "
+        >
+          We, at Jussure Technologies, specialize in crafting bespoke website,
+          e-commerce, and web app solutions.With a dedication to excellence, we ensure each project is tailored to your unique business needs, driving your success in the digital sphere.
+        </p>
+        <p
+          class="text-center secondary-paragraph"
+          style="
+            color: #555;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+          "
+        >
+       <i>Partner with our dynamic startup to create a modern, engaging website that sets your business apart.</i>
+        </p>
+          <div class="d-flex align-items-center justify-content-center" style="gap: 10px;">
+            <p>Wanna hear a Clip? &nbsp;&nbsp;It's</p>
+          <audio id="myAudio" controls class="d-none" >
+            <source src="{{url_for('static',filename = 'Jaudio.mp3')}}" type="audio/mpeg">
+        </audio>
+        <p onclick="playAudio()" id="play-icon" style="cursor: pointer;color: rgba(0, 21, 255, 0.621);"><i id="icon" class="fa-regular fa-circle-play"></i></p>
+        <p onclick="pauseAudio()" id="play-icon" style="cursor: pointer;color: rgba(0, 21, 255, 0.621);"><i id="icon"  class="fa-regular fa-circle-pause"></i></p>
+      </div>
+      <p 
+      class="text-center "
+      style="
+      color: #555;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 500;">Find Us <a style="text-decoration: none;color: rgba(0, 21, 255, 0.621);">Below</a>
+      </p>
+      <div class="text-center" >
+        <a  href="https://www.facebook.com/profile.php?id=61557362804622&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" class="me-4 text-reset">
+          <i class="fab fa-facebook-f" style="color: rgba(0, 21, 255, 0.621);"></i>
+        </a>
+        <!-- <a href="" class="me-4 text-reset"> -->
+          <!-- <i class="fab fa-google"></i> -->
+        <!-- </a> -->
+        <a  href="https://www.instagram.com/jussure_technologies?igsh=MW12NGI0MHRtNHU4cg==" class="me-4 text-reset">
+          <i class="fab fa-instagram" style="color: #405DE6;"></i>
+        </a>
+        <a  href="https://www.linkedin.com/company/jussure-technologies/?viewAsMember=true" class="me-4 text-reset">
+          <i class="fab fa-linkedin " style="color: rgba(0, 21, 255, 0.621);"></i>
+        </a>
+        </a>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- company section -->
+
+
+  <hr>
+
+
+  <!-- Team Section - Kiran, Dhanush M, Nithin B M, Pavithra Kumar D -->
+
+  <section>
+    <h3
+      style="text-align: center; color: rgba(0, 21, 255, 0.621); margin-top: 5%;font-family: 'Times New Roman', Times, serif;"
+    >
+      Meet The Team
+    </h3>
+    <div class="team-section">
+      <div class="team" name="Kiran">
+        <img
+          src="{{url_for('static',filename = 'kiran.jpg')}}"
+          class="mx-auto d-block"
+          alt=""
+          style="
+            margin-top: 3%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 21, 255, 0.621);
+          "
+        />
+        <h4
+          style="font-family: 'Times New Roman', Times, serif; font-weight: 500"
+        >
+          Kiran Kumar B K <br />
+          <p class="lead" style="color: #555">Director</p>
+        </h4>
+
+        <p
+          style="
+            border-bottom: 4px solid rgba(0, 21, 255, 0.621);
+            width: 50%;
+            text-align: center;
+            margin-left: 25%;
+            border-radius: 5px;
+          "
+        ></p>
+        <p
+          class="lead"
+          style="
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #555;
+          "
+        >
+          I'm Kiran Kumar B K a Passionate web developer and Entrepreneur
+        </p>
+        <a
+          href="https://www.instagram.com/__kiran__jt/"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kiran-kumar-2075bb300/"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+        </a>
+      </div>
+      <div class="team" name="Dhanush">
+        <img
+          src="{{url_for('static',filename = 'dhanush.jpg')}}"
+          class="mx-auto d-block"
+          alt=""
+          style="
+            margin-top: 3%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 21, 255, 0.621);
+          "
+        />
+        <h4
+          style="font-family: 'Times New Roman', Times, serif; font-weight: 500"
+        >
+          Dhanush M <br />
+          <p class="lead" style="color: #555">Co-Director and COO</p>
+        </h4>
+
+        <p
+          style="
+            border-bottom: 4px solid rgba(0, 21, 255, 0.621);
+            width: 50%;
+            text-align: center;
+            margin-left: 25%;
+            border-radius: 5px;
+          "
+        ></p>
+        <p
+          class="lead"
+          style="
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #555;
+          "
+        >
+          I'm Dhanush M a passionate MBA Student with good skills in finance and
+          accounting
+        </p>
+
+        <a
+          href="https://www.instagram.com/dhanushm07/?utm_source=ig_web_button_share_sheet"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/dhanush-m-b577b1291/"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+        </a>
+      </div>
+      <div class="team" name="Nithin B M">
+        <img
+          src="{{url_for('static',filename = 'nithin.jpg')}}"
+          class="mx-auto d-block"
+          alt=""
+          style="
+            margin-top: 3%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 21, 255, 0.621);
+          "
+        />
+        <h4
+          style="font-family: 'Times New Roman', Times, serif; font-weight: 500"
+        >
+          Nithin B M <br />
+          <p class="lead" style="color: #555">CMO</p>
+        </h4>
+
+        <p
+          style="
+            border-bottom: 4px solid rgba(0, 21, 255, 0.621);
+            width: 50%;
+            text-align: center;
+            margin-left: 25%;
+            border-radius: 5px;
+          "
+        ></p>
+        <p
+          class="lead"
+          style="
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #555;
+          "
+        >
+        I’m Nithin BM, dedicated to driving marketing and sales initiatives with passion.
+        </p>
+        <a
+          href="https://www.instagram.com/b.mnithin/"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/nithin-b-m-206b4b256/"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+        </a>
+      </div>
+      <div class="team" name="Yashas S R">
+        <img
+          src="{{url_for('static',filename = 'yashas.jpg')}}"
+          class="mx-auto d-block"
+          alt=""
+          style="
+            margin-top: 3%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 21, 255, 0.621);
+          "
+        />
+        <h4
+          style="font-family: 'Times New Roman', Times, serif; font-weight: 500"
+        >
+          Yashas S R <br />
+          <p class="lead" style="color: #555">Quality and Assurance Engineer(Tester)
+          </p>
+        </h4>
+
+        <p
+          style="
+            border-bottom: 4px solid rgba(0, 21, 255, 0.621);
+            width: 50%;
+            text-align: center;
+            margin-left: 25%;
+            border-radius: 5px;
+          "
+        ></p>
+        <p
+          class="lead"
+          style="
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #555;
+          "
+        >
+        QA engineer ensuring software quality through rigorous testing and bug identification.
+        </p>
+
+        <a
+          href="https://www.instagram.com/yashas281529/"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/yashas-sr-407b24211/"
+          class="me-4 text-reset"
+        >
+          <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+        </a>
+      </div>
+      <div class="team" name="Kiran">
+        <img
+          src="{{url_for('static',filename = 'kiran.jpg')}}"
+          class="mx-auto d-block"
+          alt=""
+          style="
+            margin-top: 3%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 21, 255, 0.621);
+          "
+        />
+        <h4
+          style="font-family: 'Times New Roman', Times, serif; font-weight: 500"
+        >
+          Kiran Kumar B K <br />
+          <p class="lead" style="color: #555">Backend Developer</p>
+        </h4>
+
+        <p
+          style="
+            border-bottom: 4px solid rgba(0, 21, 255, 0.621);
+            width: 50%;
+            text-align: center;
+            margin-left: 25%;
+            border-radius: 5px;
+          "
+        ></p>
+        <p
+          class="lead"
+          style="
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #555;
+          "
+        >
+       
+          I do work on Python Backend Developement. Crafting robust solutions with code.
+        </p>
+
+        <a
+        href="https://www.instagram.com/__kiran__jt/"
+        class="me-4 text-reset"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/kiran-kumar-2075bb300/"
+        class="me-4 text-reset"
+      >
+        <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+      </a>
+      </div>
+      <!-- <div class="team" name="Madhu H s">
+        <img
+          src="{{url_for('static',filename = 'img5.jpeg')}}"
+          class="mx-auto d-block"
+          alt=""
+          style="
+            margin-top: 3%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(0, 21, 255, 0.621);
+          "
+        />
+        <h4
+          style="font-family: 'Times New Roman', Times, serif; font-weight: 500"
+        >
+        Madhu H S<br />
+          <p class="lead" style="color: #555">Backend Developer</p>
+        </h4>
+
+        <p
+          style="
+            border-bottom: 4px solid rgba(0, 21, 255, 0.621);
+            width: 50%;
+            text-align: center;
+            margin-left: 25%;
+            border-radius: 5px;
+          "
+        ></p>
+        <p
+          class="lead"
+          style="
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #555;
+          "
+        >
+       
+         I'm Madhu a Backend developer my specializations include python/java/ flask and django
+        </p>
+
+        <a
+        href="https://www.instagram.com/__kiran__jt/"
+        class="me-4 text-reset"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/kiran-kumar-2075bb300/"
+        class="me-4 text-reset"
+      >
+        <i class="fab fa-linkedin" style="color: rgba(0, 21, 255, 0.838)"></i>
+      </a>
+      </div> -->
+    </div>
+
+  </section>
+  <hr>
+
+  <!-- Vision and mission section -->
+<section>
+  <h3
+  style="text-align: center; color: rgba(0, 21, 255, 0.621); margin-top: 5%;font-family: 'Times New Roman', Times, serif;"
+>
+  Vision and Mission
+</h3>
+<div class="vision-section">
+  <div class="vision-left vision">
+    <img src="{{url_for('static',filename = 'vision-right-img.jpg')}}" alt="" class="rounded">
+  </div>
+  <div class="vision-right vision">
+    <h4>Our Mission</h4>
+    <p>To establish a pioneering platform that operates on a <i>domain-persepective</i> approach, offering tailored solutions and services across
+      diverse industries sub-domains.
+    </p>
+    <p>We aim to empower businesses by providing them with access to specialized expertise, fostering collaboration and driving innovation in every domain.</p>
+  </div>
+</div>
+<div class="vision-section">
+  <div class="vision-right vision">
+    <h4>Our Vision</h4>
+    <p>To establish a <i>domain-persepective</i> company that transcends traditional boundaries, offering tailored solutions and services across diverse industries.
+    </p>
+    <p>Our vision is to foster innovation, collaboration, and sustainable growth by understanding and addressing the specific needs of each domain.</p>
+  </div>
+  <div class="vision-left vision">
+    <img src="{{url_for('static',filename = 'vision-left-img.jpg')}}" alt="" class="rounded">
+  </div>
+</div>
+</section>
+<hr>
+<!-- <section>
+  <h3
+  style="text-align: center; color: rgba(0, 21, 255, 0.621);font-family: 'Times New Roman', Times, serif;"
+>
+  Our Pricing
+</h3>
+  <div class="pricing-containers">
+    <div class="pricing-box">
+      <div class="icon-standard pricing-left"><i class="fa-sharp fa-solid fa-bold"></i></div>
+      <h1 style="color: rgb(228, 200, 46);">Basic Plan</h1>
+      <p>Provides essential features and services at the most affordable rate.</p>
+      <a href="/pricing">
+        <button>Check</button>
+      </a>
+    </div>
+    <div class="pricing-box">
+      <div class="icon-standard pricing-middle"><i class="fa-brands fa-s"></i></div>
+      <h1 style="color: sandybrown;">Standard Plan</h1>
+      <p>Offers a balance of features and cost, including some enhanced options.</p>
+      <a href="/pricing">
+        <button>Check</button>
+      </a>
+    </div>
+    <div class="pricing-box">
+      <div class="icon-standard pricing-right"><i class="fa-solid fa-p"></i></div>
+      <h1 style="color:violet ;">Premium Plan</h1>
+      <p>Delivers the highest level of features, services, and support at a premium price.</p>
+      <a href="/pricing">
+        <button>Check</button>
+      </a>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section>
+  <div align="center" class="button-price">
+    <a href="/pricing">
+      <button>Pricing</button>
+    </a>
+  </div>
+</section> -->
+
+<section>
+  
+</section>
+</body>
+<script>
+  var audio = document.getElementById("myAudio");
+  const icon = document.getElementById('play-icon')
+  const icon2 = document.getElementById('icon');
+
+  function playAudio() {
+    audio.play();
+  }
+  function pauseAudio() {
+    audio.pause();
+  }
+ 
+  function SwithcIcon(){
+    icon2.classList.toggle("fa-circle-pause")
+    setTimeout(() => {
+      if(icon2.classList.contains("fa-circle-pause")){
+      icon2.classList.add('fa-circle-play')
+    }
+    }, 100);
+  }
+</script>
+
+{% endblock body %}

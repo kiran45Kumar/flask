@@ -1,0 +1,93 @@
+{% extends 'index.html' %}
+{% block title2 %}Contact{% endblock title2 %}
+{% block body %}
+
+<style>
+.form-group{
+  width: 80%;
+  justify-content: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+}
+form input{
+  margin: 15px 10px;
+}
+.form-group label{
+  text-align: center;
+}
+.head-image{
+  margin-top: 1%;
+}
+.form-contact{
+  margin-top: 3%;
+
+}
+
+.form-group button:nth-child(1):hover{
+  outline: none;
+}
+.form-group button:nth-child(2):hover{
+  outline: none;
+}
+.container-top{
+  height: 200px;
+  width: 300px;
+  display: flex;
+  /* box-shadow: 0px 5px 8px 5px silver; */
+}
+.container-x{
+  display: flex;
+  justify-content:space-evenly;
+}
+</style>
+<body>
+  <div class="head-image">
+    <img src="{{url_for('static',filename = 'back1 (3).jpg')}}" class="img-fluid" alt="">
+  </div>
+  <div class="form-contact">
+    <p class="display-4 text-center" >Contact Us</p>
+    <p class="lead text-center ">We are here to help you at any time.</p>
+    <div class="greet">
+      <p class="lead text-center text-success" style="font-size: 21px;">
+        {{msg | safe}}
+        </p>
+        </div>
+    <form action="{{url_for('register')}}" class="form" method="post" id="myForm">
+      <p class="h4" style="margin-top: 2%;color: #555;">Enter Your details:</p>
+      <div class="form-group">
+        <label for="exampleInput text-center">Name:</label>
+        <input type="text" class="form-control" name="name" id="exampleInput" placeholder="Enter your name"  required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1 text-center">Email address</label>
+        <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" >
+        <p class="lead" style="font-size: 17px;">We will never share your email with anyone</p>
+      </div>
+      <div class="form-group">
+        <label for="exampleNumberInput text-center" >Number:</label>
+        <input type="number" class="form-control" name="number" id="exampleNumberInput" placeholder="Enter your number" >
+      </div>
+      <div class="form-group">
+        <label for="exampleInput text-center">Address</label>
+        <input type="address" class="form-control" name="address" id="exampleInputaddress" placeholder="Enter yourAddress" >
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1 text-center">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" placeholder="Enter your message"></textarea>        
+        <button type="submit" class="btn btn-primary" id="submitBtn" style="margin: 10px 5px;border-radius: 12px;" ><a href="{{url_for('thanks')}}"></a>Contact</button>
+        <button type="reset" class="btn " style="margin: 10px 5px;border-radius: 12px;border: 1px solid skyblue;"><a href="{{url_for('thanks')}}"></a>Reset</button>
+      </div>
+    
+    </form>
+  </div>
+  <script>
+// Add event listener for form submission
+
+
+  </script>
+</body>
+{% endblock body %}
