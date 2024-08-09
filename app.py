@@ -85,4 +85,4 @@ def thanks():
     tmsg = 'Thanks your form has been submitted'
     return render_template('thanks.html',thmsg = tmsg)
 if __name__ == '__main__':
-    app.run(debug=True,host="localhost")
+    app.run()
